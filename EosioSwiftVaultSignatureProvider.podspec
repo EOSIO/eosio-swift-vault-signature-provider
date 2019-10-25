@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EosioSwiftVaultSignatureProvider'
-  s.version          = '0.1.3'
+  s.version          = '0.2.0'
   s.summary          = 'Experimental Keychain and Secure Enclave Signature Provider for Eosio SDK for Swift.'
   s.homepage         = 'https://github.com/EOSIO/eosio-swift-vault-signature-provider'
   s.license          = { :type => 'MIT', :text => <<-LICENSE
@@ -19,11 +19,13 @@ Pod::Spec.new do |s|
                          'Serguei Vinnitskii' => 'serguei.vinnitskii@block.one',
                          'Farid Rahmani' => 'farid.rahmani@block.one',
                          'Brandon Fancher' => 'brandon.fancher@block.one',
+                         'Mark Johnson' => 'mark.johnson@block.one',
+                         'Paul Kim' => 'paul.kim@block.one',
                          'Steve McCoole' => 'steve.mccoole@objectpartners.com',
                          'Ben Martell' => 'ben.martell@objectpartners.com' }
   s.source           = { :git => 'https://github.com/EOSIO/eosio-swift-vault-signature-provider.git', :tag => "v" + s.version.to_s }
 
-  s.swift_version         = '4.2'
+  s.swift_version         = '5.0'
   s.ios.deployment_target = '11.3'
 
   s.source_files =  'EosioSwiftVaultSignatureProvider/**/*.{c,h,m,cpp,hpp}',
@@ -34,7 +36,7 @@ Pod::Spec.new do |s|
                             'SWIFT_COMPILATION_MODE' => 'wholemodule',
                             'ENABLE_BITCODE' => 'YES' }
 
-  s.ios.dependency 'EosioSwiftEcc', '~> 0.1.3'
-  s.ios.dependency 'EosioSwift', '~> 0.1.3'
-  s.ios.dependency 'EosioSwiftVault', '~> 0.1.3'
+  s.ios.dependency 'EosioSwiftEcc', '~> 0.2.0'
+  s.ios.dependency 'EosioSwift', '~> 0.2.0'
+  s.ios.dependency 'EosioSwiftVault', '~> 0.2.0'
 end
